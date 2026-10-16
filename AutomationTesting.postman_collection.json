@@ -49,9 +49,34 @@
     },
     {
       "name": "get user details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "https://fake-json-api.mock.beeceptor.com/users/1",
+          "protocol": "https",
+          "host": [
+            "fake-json-api",
+            "mock",
+            "beeceptor",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
       },
       "response": []
     }
