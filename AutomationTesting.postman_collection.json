@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "569c87c3-332b-49cd-ba31-8bafd0cee761",
+    "_postman_id": "4783d6a6-b080-445d-9b8a-ef08c6feb074",
     "name": "AutomationTesting",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "10507992"
@@ -107,6 +107,39 @@
           ],
           "path": [
             "companies"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Companies Details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://fake-json-api.mock.beeceptor.com/companies/1",
+          "protocol": "https",
+          "host": [
+            "fake-json-api",
+            "mock",
+            "beeceptor",
+            "com"
+          ],
+          "path": [
+            "companies",
+            "1"
           ]
         }
       },
