@@ -79,6 +79,38 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get Companies",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://fake-json-api.mock.beeceptor.com/companies",
+          "protocol": "https",
+          "host": [
+            "fake-json-api",
+            "mock",
+            "beeceptor",
+            "com"
+          ],
+          "path": [
+            "companies"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
